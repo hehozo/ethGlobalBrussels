@@ -24,3 +24,8 @@ In your terminal, run the following to clone the repository.
 
 <code>git clone https://github.com/scaffold-eth/scaffold-eth-2.git</code>
 
+Navigate into the new repository and bootstrap the project.
+
+<code>cd scaffold-eth-2
+npx create-eth@latest</code>
+
