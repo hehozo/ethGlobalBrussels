@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Get Started | ethGlobalBrussels</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Get Started" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to implement Scaffold-eth2 using Chronicle’s Scribe Oracle" />
+<meta property="og:description" content="How to implement Scaffold-eth2 using Chronicle’s Scribe Oracle" />
+<link rel="canonical" href="http://localhost:4000/ethGlobalBrussels/get_started/" />
+<meta property="og:url" content="http://localhost:4000/ethGlobalBrussels/get_started/" />
+<meta property="og:site_name" content="ethGlobalBrussels" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Get Started" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"How to implement Scaffold-eth2 using Chronicle’s Scribe Oracle","headline":"Get Started","url":"http://localhost:4000/ethGlobalBrussels/get_started/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ethGlobalBrussels/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/ethGlobalBrussels/feed.xml" title="ethGlobalBrussels" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ethGlobalBrussels/">ethGlobalBrussels</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ethGlobalBrussels/get_started/">Get Started</a><a class="page-link" href="/ethGlobalBrussels/implement/">Implement</a><a class="page-link" href="/ethGlobalBrussels/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Get Started</h1>
+  </header>
+
+  <div class="post-content">
+    <h3 id="using-the-scribe-oracle-with-scaffold-eth-2">Using the Scribe Oracle with Scaffold-Eth-2</h3>
+
+<p>Chronicle offers many highly reliable Oracles across ethereum and Layer 2s (and beyond) which provide smart contracts with access to real-world pricing information to power DeFi use cases.</p>
+
+<p>In this guide, we will walk through how to get set up with the Scaffold-Eth repository so that you can quickly experiment with dApps which leverage the power of Chronicle’s Scribe Oracles!</p>
+
+<p>This guide is designed to be accessible to beginners.
+<br />
+<br /></p>
+
+<hr />
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p>Before we download the Scaffold-Eth repository, make sure you have these installed:</p>
+
+<ul>
+  <li><a href="https://nodejs.org/en/download/">Node (&gt;= v18.17)</a> - if you don’t already have node installed, it’s recommended you install using ‘nvm’ (the node version manager). This will be the first option when you click on the link. <em>Note:</em> <a href="https://yarnpkg.com/getting-started/install">Yarn</a> will be installed as part of Node, so you don’t need to install this separately.</li>
+  <li><a href="https://git-scm.com/downloads">Git</a></li>
+  <li><a href="https://book.getfoundry.sh/getting-started/installation">Foundry</a> - Scaffold-Eth can run with Foundry or <a href="https://hardhat.org/hardhat-runner/docs/getting-started">HardHat</a> but this guide will focus on Foundry.</li>
+</ul>
+
+<p>Chronicle has no system dependencies for this implementation.
+<br />
+<br /></p>
+
+<hr />
+
+<h3 id="getting-started-with-scaffold-eth-2">Getting started with Scaffold-Eth-2</h3>
+
+<p>Now that we have Node, Foundry and Git installed, we can copy the Scaffold-Eth-2 repository and start setting it up! These steps are modified slightly from Option 2 in the <a href="https://docs.scaffoldeth.io/quick-start/installation">Scaffold-Eth Installation Guide</a>.</p>
+
+<p>In your terminal, run the following to clone the repository.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/scaffold-eth/scaffold-eth-2.git
+</code></pre></div></div>
+
+<p>Navigate into the new repository and bootstrap the project.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>scaffold-eth-2
+npx create-eth@latest&lt;/code&gt;
+</code></pre></div></div>
+
+<p>This will open a terminal dialogue which first asks you to input a project name, then select the solidity framework you want to use. Select <strong>foundry</strong>.</p>
+
+<p><img src="https://ik.imagekit.io/hehozo/ethGlobalBrussels/select_foundry.png" alt="select foundry" width="400" /></p>
+
+<p>Install the packages as prompted, then wait for your new project to be initialized.</p>
+
+<p><img src="https://ik.imagekit.io/hehozo/ethGlobalBrussels/install_packages.png" alt="install packages" width="400" /></p>
+
+<p>Once initialized, the process recommends next steps to start the Scaffold-Eth 2 dApp builder in your local network. However, we want to <strong>connect to the Chronicle Oracles, which requires us to connect to a testnet instead.</strong></p>
+
+<details>
+<summary>FYI: Forking a Sepolia TestNet</summary>
+
+if you want to keep working on your local machine and also have access to the Chronicle Oracles, you can <a href="https://github.com/chronicleprotocol/scaffold-oracle-reader">follow this guide</a> to fork the Sepolia TestNet, which will allow you to still read oracle values from Chronicle.
+
+This same method can be used for any test cases you put in your {YourContract}.t.sol test cases file. See the <a href="https://book.getfoundry.sh/forge/fork-testing">foundry docs on fork testing</a> for more in-depth information.
+</details>
+<p><br /></p>
+
+<hr />
+<h3 id="deploying-to-a-sepolia-testnet">Deploying to a Sepolia TestNet</h3>
+
+<p>Chronicle has Oracle Smart Contract Addresses on many different testNets including Ethereum Sepolia, Optimism Sepolia, Base Sepolia, Arbitrum Sepolia and zkSync Sepolia. See the full list of testNet smart contract addresses <a href="https://docs.chroniclelabs.org/hackathons/eth-global-brussels-hackathon">here</a>.</p>
+
+<p>This tutorial will cover deploying our scaffold-eth smart contract directly to the Optimism Sepolia testNet in three main steps:</p>
+
+<ol>
+  <li>
+    <p>Generate a burner wallet using yarn generate from within your scaffold-eth directory:</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yarn generate
+</code></pre></div>    </div>
+    <p><img src="https://ik.imagekit.io/hehozo/ethGlobalBrussels/yarn%20generate.png" alt="yarn generate" width="500" /></p>
+
+    <p>To get some testNet tokens into the new wallet, transfer from an existing wallet or use one of these faucets:</p>
+    <ul>
+      <li><a href="https://ethglobal.com/faucet">EthGlobal Faucet</a></li>
+      <li><a href="https://www.ethereum-ecosystem.com/faucets">ethereum-ecosystem.com</a></li>
+      <li><a href="https://sepoliafaucet.com/">Alchemy Sepolia Faucet</a></li>
+      <li><a href="https://learnweb3.io/faucets">learnweb3.io</a></li>
+    </ul>
+
+    <p>You can always run yarn account to view the token balances and public address for your generated wallet:</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yarn account
+</code></pre></div>    </div>
+    <p><img src="https://ik.imagekit.io/hehozo/ethGlobalBrussels/yarn_account.png" alt="yarn account" width="400" /></p>
+  </li>
+  <li>
+    <p>Update the nextjs &gt; scaffold.config.ts file line 13 to point to Optimism Sepolia (or other TestNet) instead of foundry.</p>
+
+    <p>ç</p>
+  </li>
+  <li>
+    <p>Back in the terminal, run the following command to deploy the contract to Optimism Sepolia TestNet (or other TestNet)</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yarn deploy <span class="nt">--network</span> optimismSepolia
+</code></pre></div>    </div>
+
+    <p>Open a new terminal window and start up the scaffold!</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yarn start
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Now head to http://localhost:3000 in a chrome browser to view the default scaffold-eth-2 contract and framework.
+<br />
+<br /></p>
+
+<hr />
+
+<h3 id="connecting-to-chronicle-oracle">Connecting to Chronicle Oracle</h3>
+
+<p>You will be working mostly on 2 files within the Scaffold-Eth-2 repository:</p>
+
+<ul>
+  <li><strong>YourContract.sol</strong> - the solidity smart contract. The Scaffold-Eth browser interface will show changes to this contract on the Debug tab, and you will need to re-deploy the contract to the TestNet blockchain in order for updates to be processed. Find it within the directory at packages/foundry/contracts/YourContract.sol</li>
+  <li><strong>page.tsx</strong> - the typescript file which controls the public frontend. The Scaffold-Eth browser interface will show this on the Home tab, and it will display updates as soon as the file is saved, since it does not live on the blockchain. Find it within the directory at packages/nextjs/app/page.tsx</li>
+</ul>
+
+<p>Within the smart contract, we will need to make several edits to gain access to the Chronicle Oracles. Luckily, Chronicle has made this super easy for us (modified from the steps described in <a href="https://ethglobal.com/guides/a-complete-guide-to-oracles-xfcg7#7emn9">a complete guide to oracles</a>)</p>
+
+<ol>
+  <li>Define the Interface type IChronicle and the Interface type ISelfKisser outside of the contract definition.
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Copied from [chronicle-std](https://github.com/chronicleprotocol/chronicle-std/blob/main/src/IChronicle.sol).
+</span> <span class="k">interface</span> <span class="n">IChronicle</span> <span class="p">{</span>
+     <span class="cm">/** 
+     * @notice Returns the oracle's current value.
+     * @dev Reverts if no value set.
+     * @return value The oracle's current value.
+     */</span>
+     <span class="k">function</span> <span class="n">read</span><span class="p">()</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span> <span class="n">value</span><span class="p">);</span>
+
+     <span class="cm">/** 
+     * @notice Returns the oracle's current value and its age.
+     * @dev Reverts if no value set.
+     * @return value The oracle's current value using 18 decimals places.
+     * @return age The value's age as a Unix Timestamp .
+     * */</span>
+     <span class="k">function</span> <span class="n">readWithAge</span><span class="p">()</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span> <span class="n">value</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">age</span><span class="p">);</span>
+ <span class="p">}</span>
+
+ <span class="c1">// Copied from [self-kisser](https://github.com/chronicleprotocol/self-kisser/blob/main/src/ISelfKisser.sol).
+</span> <span class="k">interface</span> <span class="n">ISelfKisser</span> <span class="p">{</span>
+     <span class="c1">/// @notice Kisses caller on oracle `oracle`.
+</span>     <span class="k">function</span> <span class="n">selfKiss</span><span class="p">(</span><span class="kt">address</span> <span class="n">oracle</span><span class="p">)</span> <span class="k">external</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Define the public variable chronicle of type IChronicle and public variable selfKisser of type ISelfKisser within the contract definition.
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// using the smart contract address for OptimismSepolia ETH_USD_1
+</span> <span class="n">IChronicle</span> <span class="k">public</span> <span class="n">chronicle</span> <span class="o">=</span> <span class="n">IChronicle</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="mh">0xc8A1F9461115EF3C1E84Da6515A88Ea49CA97660</span><span class="p">));</span>
+
+ <span class="c1">// using the smart contract address for OptimismSepolia Selfkisser_1
+</span> <span class="n">ISelfKisser</span> <span class="k">public</span> <span class="n">selfKisser</span> <span class="o">=</span> <span class="n">ISelfKisser</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="mh">0xfF619a90cDa4020897808D74557ce3b648922C37</span><span class="p">));</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Add the SelfKiss to the constructor within the contract definition
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// within the constructor block, add the below
+</span> <span class="c1">// this will cause the selfkiss to occur when the contract is compiled
+</span> <span class="n">selfKisser</span><span class="p">.</span><span class="n">selfKiss</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="n">chronicle</span><span class="p">));</span>
+</code></pre></div>    </div>
+  </li>
+  <li>We can also define a read() function to obtain the Chronicle Oracle’s value (this can be changed later, but defining it allows the result to be displayed in the debugger)
+    <div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="c1">// defining read() using the built-in functions from interface type IChronicle
+</span> <span class="k">function</span> <span class="n">read</span><span class="p">()</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">uint256</span> <span class="n">val</span><span class="p">,</span> <span class="kt">uint256</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+ <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="n">chronicle</span><span class="p">.</span><span class="n">readWithAge</span><span class="p">();</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Save these changes to the existing <strong>YourContract.sol</strong>, re-deploy using yarn, and check out your browser interface of Scaffold to see what’s changed!
+<img src="https://ik.imagekit.io/hehozo/ethGlobalBrussels/your_contract.png" alt="your contract" width="400" /></p>
+
+<p>Thanks to the nifty interface provided by Scaffold-Eth-2, we’re able to confirm that our selfKiss authorization worked, and that the read of the chronicle oracle address was successful.</p>
+
+<p>At this point, you can start playing around with the contract and typescript to create whatever dApp you want to use Chronicle’s Oracle in!</p>
+
+<p>Feel free to also <a href="/ethGlobalBrussels/implement">follow along with this example implementation</a> of the Chronicle Oracles being used in a “Diamond Hands” solidity smart contract if you’d like some ideas.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ethGlobalBrussels/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">ethGlobalBrussels</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">ethGlobalBrussels</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>How to implement Scaffold-eth2 using Chronicle&#39;s Scribe Oracle</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

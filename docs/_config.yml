@@ -1,0 +1,20 @@
+title:
+description: How to implement Scaffold-eth2 using Chronicle's Scribe Oracle
+baseurl: "/ethGlobalBrussels"
+url: "https://hehozo.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+source: .
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
